@@ -1,11 +1,13 @@
 'use strict';
 // add whatever parameters you deem necessary & write doc comment
 
-/**f
- * unction takes in word string and letter strings
+/**
+ * function takes in word string and letter strings
  * returns true if letters string can build word, else false
  * case and frequency sensitive
  *  */
+
+// TODO: shorten lines, rename wordFreq
 
 function canConstructWord(word, letters) {
 
@@ -13,9 +15,14 @@ function canConstructWord(word, letters) {
   const letterFreq = getFrequencyCounter(letters);
 
   for (const char in wordFreq){
-    console.log('char', char, "word", wordFreq[char], "letter", letterFreq[char] );
+    console.log(
+      'char', char,
+      "word", wordFreq[char],
+      "letter", letterFreq[char] );
 
-    if (wordFreq[char] > letterFreq[char] || letterFreq[char]=== undefined) return false;
+    if (wordFreq[char] > letterFreq[char] || letterFreq[char]=== undefined) {
+      return false;
+    }
   }
   return true;
 
